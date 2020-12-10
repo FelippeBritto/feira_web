@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import NormalInput from '../../../components/UI/NormalInput';
 
-
 const AddressForm = props =>  {
 
         const {address} = props;
      
-
         return (
             <form onSubmit={props.addressSubmitHandler}>
                  <div className="Row">
@@ -14,7 +12,7 @@ const AddressForm = props =>  {
                             <NormalInput 
                                 name="fullName"
                                 value={address.fullName}
-                                placeholder={'Full Name'}
+                                placeholder={'Nome Comleto'}
                                 inputHandler={props.inputHandler}
                                 type="text"
                             />
@@ -23,7 +21,7 @@ const AddressForm = props =>  {
                             <NormalInput 
                                 name="mobileNumber"
                                 value={address.mobileNumber}
-                                placeholder={'10-digit Mobile Number'}
+                                placeholder={'Celular'}
                                 inputHandler={props.inputHandler}
                                 type="text"
                             />
@@ -34,7 +32,7 @@ const AddressForm = props =>  {
                             <NormalInput 
                                 name="pinCode"
                                 value={address.pinCode}
-                                placeholder={'Pincode'}
+                                placeholder={'CEP'}
                                 inputHandler={props.inputHandler}
                                 type="text"
                             />
@@ -43,7 +41,7 @@ const AddressForm = props =>  {
                             <NormalInput 
                                 name="locality"
                                 value={address.locality}
-                                placeholder={'Locality'}
+                                placeholder={'Número'}
                                 inputHandler={props.inputHandler}
                                 type="text"
                             />
@@ -54,7 +52,7 @@ const AddressForm = props =>  {
                         <NormalInput 
                                 name="address"
                                 value={address.address}
-                                placeholder={'Address (Area and Street)'}
+                                placeholder={'Complemento'}
                                 inputHandler={props.inputHandler}
                                 type="textarea"
                                 style={{height: '60px'}}
@@ -66,7 +64,7 @@ const AddressForm = props =>  {
                             <NormalInput 
                                 name="cityDistrictTown"
                                 value={address.cityDistrictTown}
-                                placeholder={'City/District/Town'}
+                                placeholder={'Cidade'}
                                 inputHandler={props.inputHandler}
                                 type="text"
                             />
@@ -75,7 +73,7 @@ const AddressForm = props =>  {
                             <NormalInput 
                                 name="state"
                                 value={address.state}
-                                placeholder={'State'}
+                                placeholder={'Estado'}
                                 inputHandler={props.inputHandler}
                                 type="text"
                             />
@@ -87,7 +85,7 @@ const AddressForm = props =>  {
                             <NormalInput 
                                 name="landmark"
                                 value={address.landmark}
-                                placeholder={'Landmark (Optional)'}
+                                placeholder={'Ponto de Referência'}
                                 inputHandler={props.inputHandler}
                                 type="text"
                             />
@@ -96,7 +94,7 @@ const AddressForm = props =>  {
                             <NormalInput 
                                 name="alternatePhoneNumber"
                                 value={address.alternateNumber}
-                                placeholder={'Alternate Phone (Optional)'}
+                                placeholder={'Telefone Fixo(Opcional)'}
                                 inputHandler={props.inputHandler}
                                 type="text"
 
@@ -105,13 +103,12 @@ const AddressForm = props =>  {
                     </div>
 
                     <div className="Row">
-                        <button className="DeliveryAddressButton">SAVE AND DELIVER HERE</button>
+                        <button className="DeliveryAddressButton">CONFIRMAR ENDEREÇO</button>
                     </div>
 
             </form>
            
         );
-    
     
 }
 

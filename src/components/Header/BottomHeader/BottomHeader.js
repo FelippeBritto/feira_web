@@ -52,7 +52,7 @@ class BottomHeader extends Component{
                 <ul className="Menu">
                     <li className="MenuItem"><Link to="/"><i className="fas fa-home"></i></Link></li>
                     <li className="MenuItem">
-                        <Link to="/products/all" className="MenuItemElement">Shop&nbsp;<i className="fas fa-caret-down"></i></Link>
+                        <Link to="/products/all" className="MenuItemElement">Loja&nbsp;<i className="fas fa-caret-down"></i></Link>
                         
                         <ul className="Dropdown">
                         {cat}
@@ -88,8 +88,6 @@ class BottomHeader extends Component{
                         </ul>
                     </li>
                     <li className="MenuItem"><Link to="/categories">Categorias</Link></li>
-                    <li className="MenuItem"><Link to="/information">Informações</Link></li>
-                    <li className="MenuItem"><Link to="/blog">Blog</Link></li>
                 </ul>
     
             </div>

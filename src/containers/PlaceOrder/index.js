@@ -34,10 +34,9 @@ class PlaceOrder extends Component{
         isOrderConfirm: false,
         selectedPaymentType: 'cod',
         paymentTypes: [
-            {id: 1, value: 'card', label: 'Credit Card / Debit Card / ATM Card', isActive: false},
-            {id: 2, value: 'netBanking', label: 'Net Banking', isActive: false},
-            {id: 3, value: 'paypal', label: 'Paypal', isActive: false},
-            {id: 4, value: 'cod', label: 'Cash on Delivery', isActive: true},
+            {id: 1, value: 'cartão', label: 'Crédito / Débito', isActive: false},
+            {id: 2, value: 'Paypal', label: 'Paypal', isActive: false},
+            {id: 3, value: 'Boleto', label: 'Boleto', isActive: false},
         ]
     }
 
@@ -242,7 +241,6 @@ class PlaceOrder extends Component{
                 <div className="Content">
                     <div className="PlaceOrderWrapper">
 
-                        
                         <div className="DeliveryAddress">
 
                             <div className="Card">
@@ -253,7 +251,7 @@ class PlaceOrder extends Component{
                             {
                                 this.state.isAddressConfirm ? 
                                  <div className="Card">
-                                     <p className="CardText">Delivery Address {this.state.isAddressConfirm ? <i className="fas fa-check"></i> : null}</p>
+                                     <p className="CardText">Endereço {this.state.isAddressConfirm ? <i className="fas fa-check"></i> : null}</p>
                                      <p>
                                         <span>{`${address.fullName} - ${address.mobileNumber} - `}</span>
                                         <span>{ `${address.address}, ${address.cityDistrictTown}, ${address.state} - ${address.pinCode}`}</span>
@@ -261,7 +259,7 @@ class PlaceOrder extends Component{
                                  </div> :
                                  <React.Fragment>
                                 <div className="Card">
-                                    <h4>Delivery Address</h4>
+                                    <h4>Local de Entrega</h4>
                                     {
                                         this.state.addresses.length && this.state.addresses.map(address => 
                                             <DeliveryAddress 
@@ -274,7 +272,7 @@ class PlaceOrder extends Component{
                                     {
                                         this.state.existingAddress ?
                                         <div className="DeliveryButtonContainer" >
-                                            <button onClick={this.confirmDeliveryAddress} className="DeliveryAddressButton">Deliver Here</button>
+                                            <button onClick={this.confirmDeliveryAddress} className="DeliveryAddressButton">Próximo</button>
                                         </div> : null
                                     }
                                     
@@ -283,7 +281,7 @@ class PlaceOrder extends Component{
                                     <div>
                                         <RadioButton 
                                             name="address"
-                                            label="Add new Address"
+                                            label="Adiconar Endereço"
                                             value={this.state.selectedAddress}
                                             onChange={this.newAddressSelection}
                                         />
@@ -297,21 +295,18 @@ class PlaceOrder extends Component{
                                             /> : null
                                     }
                                     
-                                    
                                 </div>
                                 </React.Fragment>
                             }
                             
-                               
-
                                 {
                                     this.state.isOrderConfirm ? 
                                     <div className="Card">
-                                        <p className="CardText">Order Summary <i className="fas fa-check"></i> </p>
+                                        <p className="CardText">Pedidos <i className="fas fa-check"></i> </p>
                                     </div> : 
                                     this.state.isAddressConfirm ? 
                                     <div className="Card">
-                                        <h4 className="CardText">Order Summary </h4>
+                                        <h4 className="CardText">Pedidos </h4>
                                         {
                                             this.props.cart.cartItem.map(item => (
                                                 <div key={item.product} style={{display: 'flex', margin: '5px 0', alignItems: 'center'}}>
@@ -320,13 +315,13 @@ class PlaceOrder extends Component{
                                                     </div>
                                                     <div>
                                                         <h5>{item.name}</h5>
-                                                        <h6>Quantity : {item.quantity}</h6>
+                                                        <h6>Quantidade : {item.quantity}</h6>
                                                         <h6>${item.total}</h6>
                                                     </div>
                                                 </div>
                                             ))
                                         }
-                                        <button onClick={this.confirmOrder} className="ContinueButton">Continue</button>
+                                        <button onClick={this.confirmOrder} className="ContinueButton">Próximo</button>
                                     </div>
                                  : null
                                 }
@@ -334,7 +329,7 @@ class PlaceOrder extends Component{
                                 {
                                     this.state.isOrderConfirm ? 
                                     <div className="Card">
-                                    <h4 className="CardText">Payment Option</h4>
+                                    <h4 className="CardText">Forma de pagamento</h4>
                                     <ul>
                                         {
                                             this.state.paymentTypes.map(payment => 
@@ -350,31 +345,20 @@ class PlaceOrder extends Component{
                                         }
                                     </ul>
                                     {
-                                        this.state.selectedPaymentType !== 'cod' ? 
-                                        <p className="ErrorMessage">Sorry, Only Cash on Delivery is available</p> : null
+                                        this.state.selectedPaymentType == 'Boleto' ? 
+                                        <p className="ErrorMessage">Pagamento apenas em dinheiro!</p> : null
                                     }
-                                    <button className="PaymentConfirm" onClick={this.submitOrder}>Confirm Order</button>
+                                    <button className="PaymentConfirm" onClick={this.submitOrder}>Confirmar pedido</button>
 
                                 </div> : null
                                 }
                               
-                                
-
-                            
-
-                            
-
-
-
                             </div>
 
                                 <CartPrice />
 
-                            
                     </div>
 
-                    
-                   
                 </div>
                 
             </React.Fragment>

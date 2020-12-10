@@ -23,7 +23,7 @@
     margin: 10px 0; 
 }
 .DeliveryAddressButton, .ContinueButton, .OrderConfirmButton, .PaymentConfirm{
-    background: orange;
+    background: #6E4AAB;
     border: 0;
     color: #252525;
     font-size: 14px;    

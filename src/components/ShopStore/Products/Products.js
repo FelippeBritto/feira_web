@@ -8,7 +8,7 @@ import Product from './Product';
 class Products extends Component{
 
     state = {
-        slug: 'Products'
+        slug: 'Produtos'
     }
 
     componentDidMount() {
@@ -72,9 +72,9 @@ class Products extends Component{
                     </div>
                     <div className="ContentBody">
                         <div className="SideMenu">
-                            <h3 className="SideMenuTitle">Filters</h3>
+                            <h3 className="SideMenuTitle">Filtros</h3>
                             <div className="Filter">
-                                <p className="FilterTitle">Categories</p>
+                                <p className="FilterTitle">Categorias</p>
                                 <ul>
                                     {
                                         this.props.products.categories.length > 0 ? 
@@ -84,12 +84,12 @@ class Products extends Component{
                             </div>
                             
                            <div className="Filter">
-                               <p className="FilterTitle">Price</p>
+                               <p className="FilterTitle">Preço</p>
                                <div>
-                                    <button onClick={() => this.applyFilter({price:1} )} className="FilterButton">Low to High</button>
+                                    <button onClick={() => this.applyFilter({price:1} )} className="FilterButton">Menor ao Maior</button>
                                </div>
                                <div>
-                                    <button onClick={() => this.applyFilter({price: -1})} className="FilterButton">High to Low</button>
+                                    <button onClick={() => this.applyFilter({price: -1})} className="FilterButton">Maior ao Menor</button>
                                </div>
                                
                            </div>

@@ -107,7 +107,7 @@ class Cart extends Component{
                         <div className="CartDetails">
                             {/* List cart items */}
                             <div className="CardTitle">
-                                <h3>My Cart</h3>
+                                <h3>Meu Carrinho</h3>
                             </div>
                             <div className="CardBody">
 
@@ -128,9 +128,8 @@ class Cart extends Component{
                                     />)
                                 }
                                 
-
                                 <div className="PlaceOrder">
-                                    <button className="PlaceOrderButton" onClick={() => this.props.history.push('/place-order')}>Place Order</button>
+                                    <button className="PlaceOrderButton" onClick={() => this.props.history.push('/place-order')}>Local da Entrega</button>
                                 </div>
 
                             </div>

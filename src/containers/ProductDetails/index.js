@@ -111,14 +111,14 @@ class ProductDetails extends Component{
                             <p className="ProductTitle">{product.name}</p>
                             <p className="ProductPrice">${product.price}</p>
                             <div className="ProductDescription">
-                                <h3>Product Description</h3>
+                                <h3>Descrição do Produto</h3>
                                 <p>{product.description}</p>
                             </div>
                         </div>
                     </div>
                     
                     <div className="SimilarProducts">
-                        <h3>Similar Products</h3>
+                        <h3>Produtos Similares</h3>
                         <div className="SimilarProductsWrapper">
                             
                             <div className="SimilarProduct">
@@ -126,8 +126,8 @@ class ProductDetails extends Component{
                                     <img src="https://rukminim1.flixcart.com/image/312/312/jxz0brk0/mobile/u/u/v/realme-3i-rmx1827-original-imafgbbkzrgsstkj.jpeg?q=70" alt=""/>
                                 </div>
                                 <div className="SimilarProductDetails">
-                                    <h5>Product Name</h5>
-                                    <p>$ 36521</p>
+                                    <h5>Nome do Produto</h5>
+                                    <p>R$ 36521</p>
                                 </div>
                             </div>
 
@@ -136,8 +136,8 @@ class ProductDetails extends Component{
                                     <img src="https://rukminim1.flixcart.com/image/312/312/jzrb53k0pkrrdj/mobile/e/s/j/mi-redmi-7a-mzb8008in-original-imafg27hramfktfs.jpeg?q=70" alt=""/>
                                 </div>
                                 <div className="SimilarProductDetails">
-                                    <h5>Product Name</h5>
-                                    <p>$ 36521</p>
+                                    <h5>Nome do Produto</h5>
+                                    <p>R$ 36521</p>
                                 </div>
                             </div>
                             
@@ -146,15 +146,15 @@ class ProductDetails extends Component{
                                     <img src="https://rukminim1.flixcart.com/image/495/594/jxgflow0/t-shirt/y/h/g/xxl-tnvgyvnful-d22-tripr-original-imafhuq2s3yxbx2t.jpeg?q=50" alt=""/>
                                 </div>
                                 <div className="SimilarProductDetails">
-                                    <h5>Product Name</h5>
-                                    <p>$ 36521</p>
+                                    <h5>Nome do Produto</h5>
+                                    <p>R$ 36521</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div className="ProductReviews">
-                        <h3>Product Reviews</h3>
+                        <h3>Avaliações</h3>
                     </div>
                     
                 </div>

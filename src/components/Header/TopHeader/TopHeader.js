@@ -25,17 +25,11 @@ class TopHeader extends Component{
 
         return (
             <div className="TopHeader">
-                <div className="SocialMediaIcons">
-                    <i className="fab fa-facebook-f"></i>
-                    <i className="fab fa-google-plus-g"></i>
-                    <i className="fab fa-instagram"></i>
-                    <i className="fab fa-youtube"></i>
-                </div>
                 <div>
                     <ul className="TopMenu">
                         <li className="MenuItem">
                             <i className="far fa-user-circle"></i>
-                            <Link to="/account">{this.props.auth.isAuthenticated ? this.props.auth.user.firstName: 'My Account'}</Link>
+                            <Link to="/account">{this.props.auth.isAuthenticated ? this.props.auth.user.firstName: ' Minha Conta'}</Link>
                             {guestAccount}
                         </li>
                     </ul>

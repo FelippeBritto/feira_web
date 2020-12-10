@@ -1,11 +1,11 @@
 {
-  "author":{
+  "author": {
     "name": "Matheus Brito",
-    "repository":"",
+    "repository": "",
     "email": "mfelippe.britto@gmail.com"
   },
   "name": "feira-web",
-  "description":"Aplicação e-commerce desenvolvida como critério de avaliação na matéria de WebII",
+  "description": "Aplicação e-commerce desenvolvida como critério de avaliação na matéria de WebII",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
