@@ -35,7 +35,6 @@ class Products extends Component{
             this.getProducts(this.props.match.params.slug);
         }
 
-        
     }
 
     applyFilter = (filter) => {
@@ -62,8 +61,6 @@ class Products extends Component{
 
         const slug = Object.keys(this.props.match.params).length > 0 ? this.props.match.params.slug : this.state.slug;
 
-        
-        
         return (
 
             <div className="Content">
@@ -112,7 +109,6 @@ class Products extends Component{
                             
                         </div>
 
-                            
                         </div>
 
                     </div>

@@ -35,9 +35,6 @@ class ProductDetails extends Component{
             })
         }
 
-                
-
-        
         const { category, slug } = this.props.match.params;
         fetch(`${base_url}/products/${category}/${slug}`)
         .then(response => response.json())
@@ -54,8 +51,6 @@ class ProductDetails extends Component{
         .catch(error => {
             console.log(error);
         });
-
-
 
     }
 
@@ -100,13 +95,13 @@ class ProductDetails extends Component{
                                 <img src={product.productPic[0].img} alt="" />
                             </div>
                             <div className="ActionButtonWrapper">
-                                <button onClick={() => { this.addToCart(product._id, product.price, product.name, product.productPic[0].img) }}><i className="fas fa-shopping-cart"></i>&nbsp;ADD TO CART</button>
-                                <button style={{background: '#fb641b'}}><i className="fas fa-bolt"></i>&nbsp;BUY NOW</button>
+                                <button onClick={() => { this.addToCart(product._id, product.price, product.name, product.productPic[0].img) }}><i className="fas fa-shopping-cart"></i>&nbsp;Colocar no Carrinho </button>
+                                <button style={{background: '#fb641b'}}><i className="fas fa-bolt"></i>&nbsp;Comprar</button>
                             </div>
                         </div>
                         <div className="ProductDetails">
                             <div className="BreadCrumb">
-                                <small>Home > Mobiles > Iphone</small>
+                                <small>Home > Celulares > Iphone</small>
                             </div>
                             <p className="ProductTitle">{product.name}</p>
                             <p className="ProductPrice">${product.price}</p>
@@ -162,8 +157,6 @@ class ProductDetails extends Component{
             productDescription = <div>Product is loading...!</div>
         }
         
-        
-
         return (
             <div>
                 <Header/>
